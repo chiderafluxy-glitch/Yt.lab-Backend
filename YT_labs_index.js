@@ -380,8 +380,8 @@ class YouTubeAutomationSaaS {
         const userId = req.user.id;
 
         const prices = {
-          basic: 'price_1Axxx', // Add your actual Stripe price ID
-          pro: 'price_2Ayyy'    // Add your actual Stripe price ID
+          basic: process.env.STRIPE_BASIC_PRICE_ID,
+          pro: process.env.STRIPE_PRO_PRICE_ID
         };
 
         const { data: existingSub } = await supabase
