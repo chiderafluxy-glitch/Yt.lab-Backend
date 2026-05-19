@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const jwt = require('jsonwebtoken');
+const ws = require('ws');
 const { createClient } = require('@supabase/supabase-js');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
@@ -13,7 +14,13 @@ const PORT = process.env.PORT || 3456;
 // Initialize Supabase
 const supabase = createClient(
   process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
+  process.env.SUPABASE_SERVICE_KEY,
+  {
+    realtime: {
+      schema: 'realtime',
+      transport: ws
+    }
+  }
 );
 
 // Middleware

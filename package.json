@@ -23,7 +23,8 @@
     "dotenv": "16.0.3",
     "jsonwebtoken": "9.0.2",
     "@supabase/supabase-js": "2.38.4",
-    "stripe": "12.15.0"
+    "stripe": "12.15.0",
+    "ws": "8.14.2"
   },
   "devDependencies": {
     "nodemon": "3.0.1"
