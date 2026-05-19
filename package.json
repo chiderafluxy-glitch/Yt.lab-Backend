@@ -23,6 +23,7 @@
     "nodemailer": "^6.9.7",
     "open": "^8.4.2",
     "openai": "^4.0.0",
+    "sqlite3": "^5.1.7",
     "stripe": "^14.21.0",
     "winston": "^3.11.0",
     "winston-daily-rotate-file": "^4.7.1"
